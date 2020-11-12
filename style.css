@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+/*---------------------------------------------*/
+.header { grid-area: header; }
+.menu { grid-area: menu; }
+.main { grid-area: main; }
+.right { grid-area: right; }
+.footer { grid-area: footer; }
+
+.container{
+    display: grid;
+    grid-template-areas:'header header header header header header'
+                        'menu main main main main right'
+                        'menu footer footer footer footer footer' ;
+    grid-gap: 10px;
+    grid-template-rows: 115px 2000px 200px;
+    background-color: #231a66;
+    padding: 10px;
+}
+.container > div {
+    background-color: rgba(3, 5, 12, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+/* yanha se navigation bar ke baare mein likhe hain */
+/*-------------------------------------------------*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(3, 5, 12, 0.8);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+/*-------------------------------------------------------*/
